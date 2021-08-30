@@ -2684,7 +2684,7 @@ export const drawMesh = (predictions, ctx) => {
         for (let i = 0; i < keypoints.length; i++) {
           const x = keypoints[i][0];
           const y = keypoints[i][1];
-          //no z coordinates, unless drone  
+          //no z coordinates, as camera is stationary (i.e not a drone)
           ctx.beginPath();
           ctx.arc(x, y, 1 /* radius */, 0, 3 * Math.PI);
           ctx.fillStyle = "#74c147";
